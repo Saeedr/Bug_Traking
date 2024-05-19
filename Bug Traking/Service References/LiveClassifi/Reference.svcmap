@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48d24f23-c95c-45ca-b281-a3edc59cac2c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LiveClassification.wsdl" MetadataType="Wsdl" ID="76efb057-f12a-40b3-9cf3-b8f49ae993e7" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?wsdl" />
+    <MetadataFile FileName="LiveClassification.disco" MetadataType="Disco" ID="5b70d164-343d-4871-888b-e0773695e1c9" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?disco" />
+    <MetadataFile FileName="LiveClassification.xsd" MetadataType="Schema" ID="46ef455a-5103-47c7-ba31-7ec6962f07d0" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd2" />
+    <MetadataFile FileName="LiveClassification1.xsd" MetadataType="Schema" ID="f175d706-ec0a-49c9-8d1f-a29f6f611245" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd3" />
+    <MetadataFile FileName="LiveClassification2.xsd" MetadataType="Schema" ID="4365a44e-49db-46ac-8c87-602c4a05b6a2" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd0" />
+    <MetadataFile FileName="LiveClassification3.xsd" MetadataType="Schema" ID="87edab8d-228a-47cb-8a8e-73478ea8b40f" SourceId="1" SourceUrl="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

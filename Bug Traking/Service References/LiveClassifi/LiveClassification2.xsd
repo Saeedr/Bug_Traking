@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataContracts.Behdasht.Request" />
+  <xs:import schemaLocation="http://app2.shahab.behdasht.gov.ir/ShahabServices/LiveClassification.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataContracts.Country.Request" />
+  <xs:element name="GetBehdashtClassificationByParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromDay" type="xs:int" />
+        <xs:element minOccurs="0" name="orgKind" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBehdashtClassificationByParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DataContracts.Behdasht.Request" minOccurs="0" name="GetBehdashtClassificationByParamResult" nillable="true" type="q1:ArrayOfReqOrganization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryClassificationByParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AreaTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ParentAreaCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryClassificationByParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataContracts.Country.Request" minOccurs="0" name="GetCountryClassificationByParamResult" nillable="true" type="q2:ArrayOfReqCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryClassificationByCountryCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AreaTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ParentAreaCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryClassificationByCountryCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataContracts.Country.Request" minOccurs="0" name="GetCountryClassificationByCountryCodeResult" nillable="true" type="q3:ArrayOfReqCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

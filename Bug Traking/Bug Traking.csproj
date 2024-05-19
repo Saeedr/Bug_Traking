@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74D21E4C-5CB0-4CDE-9898-5F8538571411}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bug_Traking</RootNamespace>
+    <AssemblyName>Bug Traking</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminKartable.aspx" />
+    <Content Include="AdminPart.aspx" />
+    <Content Include="AdminPriority.aspx" />
+    <Content Include="AdminProject.aspx" />
+    <Content Include="AdminService.aspx" />
+    <Content Include="AdminSheda.aspx" />
+    <Content Include="AdminSupportManager.aspx" />
+    <Content Include="AdminSystem.aspx" />
+    <Content Include="AdminTicketAdd.aspx" />
+    <Content Include="AdminTicketOK.aspx" />
+    <Content Include="AdminTiketShow.aspx" />
+    <Content Include="AdminTitle.aspx" />
+    <Content Include="pic\attach.svg" />
+    <Content Include="ClientAddTicket.aspx" />
+    <Content Include="ClientProfile.aspx" />
+    <Content Include="ClientTicketsKartable.aspx" />
+    <Content Include="ClientTiketDell.aspx" />
+    <Content Include="ClientTiketShow.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Exit.aspx" />
+    <Content Include="fm.tagator.jquery.css" />
+    <Content Include="fm.tagator.jquery.js" />
+    <Content Include="jquery-1.9.1.min.js" />
+    <Content Include="jquery.auto-complete.css" />
+    <Content Include="jquery.auto-complete.min.js" />
+    <Content Include="js-persian-cal.min.js" />
+    <Content Include="jspc-gray.css" />
+    <Content Include="js\adapters\standalone-framework.js" />
+    <Content Include="js\adapters\standalone-framework.src.js" />
+    <Content Include="js\Ep.js" />
+    <Content Include="js\highcharts-3d.js" />
+    <Content Include="js\highcharts-3d.src.js" />
+    <Content Include="js\highcharts-more.js" />
+    <Content Include="js\highcharts-more.src.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts.src.js" />
+    <Content Include="js\modules\broken-axis.js" />
+    <Content Include="js\modules\broken-axis.src.js" />
+    <Content Include="js\modules\canvas-tools.js" />
+    <Content Include="js\modules\canvas-tools.src.js" />
+    <Content Include="js\modules\data.js" />
+    <Content Include="js\modules\data.src.js" />
+    <Content Include="js\modules\drilldown.js" />
+    <Content Include="js\modules\drilldown.src.js" />
+    <Content Include="js\modules\exporting.js" />
+    <Content Include="js\modules\exporting.src.js" />
+    <Content Include="js\modules\funnel.js" />
+    <Content Include="js\modules\funnel.src.js" />
+    <Content Include="js\modules\heatmap.js" />
+    <Content Include="js\modules\heatmap.src.js" />
+    <Content Include="js\modules\no-data-to-display.js" />
+    <Content Include="js\modules\no-data-to-display.src.js" />
+    <Content Include="js\modules\solid-gauge.js" />
+    <Content Include="js\modules\solid-gauge.src.js" />
+    <Content Include="js\modules\treemap.js" />
+    <Content Include="js\modules\treemap.src.js" />
+    <Content Include="js\themes\dark-blue.js" />
+    <Content Include="js\themes\dark-green.js" />
+    <Content Include="js\themes\dark-unica.js" />
+    <Content Include="js\themes\gray.js" />
+    <Content Include="js\themes\grid-light.js" />
+    <Content Include="js\themes\grid.js" />
+    <Content Include="js\themes\sand-signika.js" />
+    <Content Include="js\themes\skies.js" />
+    <Content Include="main.css" />
+    <Content Include="PanelStyle.css" />
+    <Content Include="pcal.png" />
+    <Content Include="pic\1.gif" />
+    <Content Include="pic\10.gif" />
+    <Content Include="pic\11.gif" />
+    <Content Include="pic\12.gif" />
+    <Content Include="pic\13.gif" />
+    <Content Include="pic\14.gif" />
+    <Content Include="pic\15.gif" />
+    <Content Include="pic\16.gif" />
+    <Content Include="pic\2.gif" />
+    <Content Include="pic\3.gif" />
+    <Content Include="pic\4.gif" />
+    <Content Include="pic\5.gif" />
+    <Content Include="pic\6.gif" />
+    <Content Include="pic\7.gif" />
+    <Content Include="pic\8.gif" />
+    <Content Include="pic\9.gif" />
+    <Content Include="pic\AdminHeader.png" />
+    <Content Include="pic\attachment-icon.png" />
+    <Content Include="pic\BG.jpg" />
+    <Content Include="pic\BG.png" />
+    <Content Include="pic\btnVorod.png" />
+    <Content Include="pic\ChatOption.png" />
+    <Content Include="pic\ContentBG.png" />
+    <Content Include="pic\ContentBG2.png" />
+    <Content Include="pic\Hidebar.png" />
+    <Content Include="pic\LeftFelesh.png" />
+    <Content Include="pic\loader.gif" />
+    <Content Include="pic\LoginBG.png" />
+    <Content Include="pic\LoginBG2.png" />
+    <Content Include="pic\LoginBG3.png" />
+    <Content Include="pic\Def.png" />
+    <Content Include="pic\Main.png" />
+    <Content Include="pic\MsgMe.png" />
+    <Content Include="pic\MsgYou.png" />
+    <Content Include="pic\offLine.png" />
+    <Content Include="pic\Online.png" />
+    <Content Include="pic\RightFelesh.png" />
+    <Content Include="pic\SideBarBG.png" />
+    <Content Include="pic\SideBarFooter.png" />
+    <Content Include="pic\SideBarHeader.png" />
+    <Content Include="pic\Timer.png" />
+    <Content Include="pic\UserSetting.png" />
+    <Content Include="pic\UserTop.png" />
+    <Content Include="Service References\LiveClassifi\Bug_Traking.LiveClassifi.ReqCountry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LiveClassifi\Bug_Traking.LiveClassifi.ReqOrganization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\MohsenPublish.pubxml" />
+    <None Include="Service References\LiveClassifi\LiveClassification.disco" />
+    <None Include="Service References\LiveClassifi\configuration91.svcinfo" />
+    <None Include="Service References\LiveClassifi\configuration.svcinfo" />
+    <None Include="Service References\LiveClassifi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="style.css" />
+    <Content Include="SupportAddFolder.aspx" />
+    <Content Include="SupportBugAdd.aspx" />
+    <Content Include="SupportDashboard.aspx" />
+    <Content Include="SupportPosition.aspx" />
+    <Content Include="SupportProfile.aspx" />
+    <Content Include="SupportProfileDel.aspx" />
+    <Content Include="SupportProfileManage.aspx" />
+    <Content Include="SupportSearch.aspx" />
+    <Content Include="SupportSearch2.aspx" />
+    <Content Include="SupportTiketShow.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminKartable.aspx.cs">
+      <DependentUpon>AdminKartable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminKartable.aspx.designer.cs">
+      <DependentUpon>AdminKartable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPart.aspx.cs">
+      <DependentUpon>AdminPart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPart.aspx.designer.cs">
+      <DependentUpon>AdminPart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPriority.aspx.cs">
+      <DependentUpon>AdminPriority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPriority.aspx.designer.cs">
+      <DependentUpon>AdminPriority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProject.aspx.cs">
+      <DependentUpon>AdminProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProject.aspx.designer.cs">
+      <DependentUpon>AdminProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminService.aspx.cs">
+      <DependentUpon>AdminService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminService.aspx.designer.cs">
+      <DependentUpon>AdminService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSheda.aspx.cs">
+      <DependentUpon>AdminSheda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSheda.aspx.designer.cs">
+      <DependentUpon>AdminSheda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSupportManager.aspx.cs">
+      <DependentUpon>AdminSupportManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSupportManager.aspx.designer.cs">
+      <DependentUpon>AdminSupportManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSystem.aspx.cs">
+      <DependentUpon>AdminSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSystem.aspx.designer.cs">
+      <DependentUpon>AdminSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTicketAdd.aspx.cs">
+      <DependentUpon>AdminTicketAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTicketAdd.aspx.designer.cs">
+      <DependentUpon>AdminTicketAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTicketOK.aspx.cs">
+      <DependentUpon>AdminTicketOK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTicketOK.aspx.designer.cs">
+      <DependentUpon>AdminTicketOK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTiketShow.aspx.cs">
+      <DependentUpon>AdminTiketShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTiketShow.aspx.designer.cs">
+      <DependentUpon>AdminTiketShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTitle.aspx.cs">
+      <DependentUpon>AdminTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTitle.aspx.designer.cs">
+      <DependentUpon>AdminTitle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAddTicket.aspx.cs">
+      <DependentUpon>ClientAddTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAddTicket.aspx.designer.cs">
+      <DependentUpon>ClientAddTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProfile.aspx.cs">
+      <DependentUpon>ClientProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientProfile.aspx.designer.cs">
+      <DependentUpon>ClientProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTicketsKartable.aspx.cs">
+      <DependentUpon>ClientTicketsKartable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientTicketsKartable.aspx.designer.cs">
+      <DependentUpon>ClientTicketsKartable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTiketDell.aspx.cs">
+      <DependentUpon>ClientTiketDell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientTiketDell.aspx.designer.cs">
+      <DependentUpon>ClientTiketDell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTiketShow.aspx.cs">
+      <DependentUpon>ClientTiketShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientTiketShow.aspx.designer.cs">
+      <DependentUpon>ClientTiketShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseContext.cs" />
+    <Compile Include="dbInitial.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exit.aspx.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exit.aspx.designer.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LiveClassifi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Support.Master.cs">
+      <DependentUpon>Support.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support.Master.designer.cs">
+      <DependentUpon>Support.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SupportAddFolder.aspx.cs">
+      <DependentUpon>SupportAddFolder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportAddFolder.aspx.designer.cs">
+      <DependentUpon>SupportAddFolder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportBugAdd.aspx.cs">
+      <DependentUpon>SupportBugAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportBugAdd.aspx.designer.cs">
+      <DependentUpon>SupportBugAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportDashboard.aspx.cs">
+      <DependentUpon>SupportDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportDashboard.aspx.designer.cs">
+      <DependentUpon>SupportDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportPosition.aspx.cs">
+      <DependentUpon>SupportPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportPosition.aspx.designer.cs">
+      <DependentUpon>SupportPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportProfile.aspx.cs">
+      <DependentUpon>SupportProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportProfile.aspx.designer.cs">
+      <DependentUpon>SupportProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportProfileDel.aspx.cs">
+      <DependentUpon>SupportProfileDel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportProfileDel.aspx.designer.cs">
+      <DependentUpon>SupportProfileDel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportProfileManage.aspx.cs">
+      <DependentUpon>SupportProfileManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportProfileManage.aspx.designer.cs">
+      <DependentUpon>SupportProfileManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportSearch.aspx.cs">
+      <DependentUpon>SupportSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportSearch.aspx.designer.cs">
+      <DependentUpon>SupportSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportSearch2.aspx.cs">
+      <DependentUpon>SupportSearch2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportSearch2.aspx.designer.cs">
+      <DependentUpon>SupportSearch2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportTiketShow.aspx.cs">
+      <DependentUpon>SupportTiketShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportTiketShow.aspx.designer.cs">
+      <DependentUpon>SupportTiketShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabels\Category.cs" />
+    <Compile Include="Tabels\Comment.cs" />
+    <Compile Include="Tabels\Folders.cs" />
+    <Compile Include="Tabels\KeyWords.cs" />
+    <Compile Include="Tabels\Parts.cs" />
+    <Compile Include="Tabels\Position.cs" />
+    <Compile Include="Tabels\Priority.cs" />
+    <Compile Include="Tabels\Profile.cs" />
+    <Compile Include="Tabels\Projects.cs" />
+    <Compile Include="Tabels\Service.cs" />
+    <Compile Include="Tabels\Shedat.cs" />
+    <Compile Include="Tabels\Ssystem.cs" />
+    <Compile Include="Tabels\Support.cs" />
+    <Compile Include="Tabels\TicketSupport.cs" />
+    <Compile Include="Tabels\TiketOK.cs" />
+    <Compile Include="Tabels\Tikets.cs" />
+    <Compile Include="Tabels\User.cs" />
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Font\BYekan.eot" />
+    <Content Include="Font\BYekan.ttf" />
+    <Content Include="Font\BYekan.woff" />
+    <Content Include="User.Master" />
+    <Content Include="Admin.Master" />
+    <Content Include="Support.Master" />
+    <None Include="Service References\LiveClassifi\LiveClassification.wsdl" />
+    <None Include="Service References\LiveClassifi\LiveClassification.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LiveClassifi\LiveClassification1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LiveClassifi\LiveClassification2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LiveClassifi\LiveClassification3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LiveClassifi\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21183</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21183/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

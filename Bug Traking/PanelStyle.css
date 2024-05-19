@@ -1,0 +1,591 @@
+@font-face{
+	font-family:'BYekan';
+	src: url('Font/BYekan.eot?#') format('eot'),
+	url('Font/BYekan.voff') format('voff'),
+	url('Font/BYekan.ttf') format('truetype');
+}
+*
+{
+	margin:0px;
+	padding:0px;
+	direction:rtl;
+	font-family:'BYekan';
+    font-size:12px;
+}
+body
+{
+    background:url(pic/BG.jpg);
+	background-size:cover;
+	background-attachment:fixed;
+	margin:0px;
+	padding:0px;
+	direction:rtl;
+}
+#HeaderPanle
+{
+	background:rgba(31, 58, 147,0.5);
+	height:70px;
+	width:100%;
+	position:relative;
+	border-bottom:solid 1px #c3809e;
+}
+#HeaderPanle img
+{
+	border-radius:30px;
+	margin-top:5px;
+	margin-right:5px;
+	float:right;
+}
+.TopSearch
+{
+	width:250px;
+	float:right;
+	height:40px;
+	margin-top:15px;
+	margin-right:30px;
+    position:relative;
+    z-index:20;
+}
+.btnSearch
+{
+	padding-right:10px;
+	padding-left:10px;
+	height:40px;
+	border:none;
+	outline:none;
+	background:linear-gradient(#CC3,#CF9);
+	cursor:pointer;
+}
+.btnSearch:hover
+{
+	background:linear-gradient(#CF9,#CC3);
+}
+.txtSearch
+{
+	padding-right:10px;
+	padding-left:10px;
+	text-align:center;
+	height:33px;
+	margin-right:10px;
+	width:130px;
+	background:url(pic/LoginBG.png);
+	border:solid 1px #000;
+	outline:none;
+}
+.txtSearch:focus
+{
+	box-shadow:0px 0px 5px #3399FF;
+}
+#RightPanel
+{
+	background:rgba(31, 58, 147,0.5);
+	width:20%;
+	float:right;
+	border-left:solid 1px #c3809e;
+	height:auto;
+}
+.RightPanelItem
+{
+	overflow:hidden;
+    margin-bottom:3px;
+	float:right;
+	width:100%;
+	transition:all 500ms ease-in-out 0s;
+}
+#RightPanel span
+{
+	width:100%;
+	display:block;
+	font-size:14px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:right;
+	text-align:center;
+	color:#000;
+    border-bottom:solid 1px #08a39e;
+    border-top:solid 1px #08a39e;
+	background:rgba(197, 239, 247,0.5);
+	cursor:pointer;
+}
+#RightPanel a
+{
+	width:90%;
+	padding-right:10%;
+	text-decoration:none;
+	color:#FFF;
+	padding-top:7px;
+	padding-bottom:7px;
+	display:block;
+	float:right;
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-ms-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+}
+#RightPanel a:hover
+{
+	background:rgba(255,255,255,0.5);
+	color:#000;
+}
+.Content
+{
+	width:60%;
+	float:right;
+	margin-right:10%;
+	margin-top:30px;
+    margin-bottom:30px;
+	background:rgba(197, 239, 247,0.5);
+	background:rgba(255, 255, 255,0.6);
+	border-bottom:solid 1px #c3809e;
+}
+.Content span
+{
+    display:block;
+	font-size:14px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:right;
+	text-align:center;
+	color:#FFF;
+	background:rgba(31, 58, 147,0.5);
+    width:100%;
+    margin-bottom:15px;
+}
+.Content table
+{
+	margin:auto;
+	color:#000;
+}
+.BtnSubmit
+{
+	padding:10px;
+	border:none;
+	outline:none;
+	margin-top:10px;
+	cursor:pointer;
+	color:#FFF;
+	background:linear-gradient(#093,#096);
+	margin-bottom:15px;
+}
+.txt
+{
+	padding:5px;
+	width:250px;
+	margin:5px;
+	outline:none;
+	border:solid 1px #b5b0b0;
+	color:#000;
+}
+.txt:focus
+{
+	box-shadow:0px 0px 10px 1px #FFFFFF;
+}
+#KeyWords
+{
+	padding:5px;
+	width:250px;
+	float:right;
+	background:#FFF;
+	margin-right:5px;
+}
+#tblCartabl tr
+{
+	text-align:center;
+}
+#tblCartabl tr:hover
+{
+    color:#e896f2;
+}
+.ShowBtn
+{
+	padding:5px;
+	border:none;
+	background:linear-gradient(#0C6,#096);
+	margin-right:5px;
+	cursor:pointer;
+	transition:all 200ms ease-in-out 0s;
+	-moz-transition:all 200ms ease-in-out 0s;
+	-ms-transition:all 200ms ease-in-out 0s;
+	-o-transition:all 200ms ease-in-out 0s;
+	-webkit-transition:all 200ms ease-in-out 0s;
+	color:#FFF;
+}
+.ShowBtn:hover
+{
+	transform:scale(1.1,1.1);
+	-moz-transform:scale(1.1,1.1);
+	-ms-transform:scale(1.1,1.1);
+	-o-transform:scale(1.1,1.1);
+	-webkit-transform:scale(1.1,1.1);
+	box-shadow:0px 0px 5px #0F0;
+}
+.DelBtn
+{
+	padding:5px;
+	border:none;
+	background:linear-gradient(#F63,#F33);
+	margin-right:5px;
+	cursor:pointer;
+	transition:all 200ms ease-in-out 0s;
+	-moz-transition:all 200ms ease-in-out 0s;
+	-ms-transition:all 200ms ease-in-out 0s;
+	-o-transition:all 200ms ease-in-out 0s;
+	-webkit-transition:all 200ms ease-in-out 0s;
+	color:#FFF;
+}
+.DelBtn:hover
+{
+	transform:scale(1.1,1.1);
+	-moz-transform:scale(1.1,1.1);
+	-ms-transform:scale(1.1,1.1);
+	-o-transform:scale(1.1,1.1);
+	-webkit-transform:scale(1.1,1.1);
+	box-shadow:0px 0px 5px #FF0000;
+}
+#tblShowTicket tr
+{
+	background:url(pic/LoginBG3.png);
+}
+.btnDel
+{
+    padding:10px;
+	border:none;
+	background:linear-gradient(#F63,#F33);
+	margin-right:5px;
+	cursor:pointer;
+    color:#FFF;
+}
+.btnDel:hover
+{
+	background:linear-gradient(#F33,#F63);
+}
+.DivSetting
+{
+    width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:right;
+	color:#FFF;
+	background:rgba(31, 58, 147,0.5);
+}
+.drpSendTo2
+{
+	background:url(pic/LoginBG.png);
+    color:#FFF;
+    padding:5px;
+	outline:none;
+	border:none;
+    float:right;
+    margin-right:5px;
+    color:#000;
+}
+.ConfirmDialog
+{
+	margin:auto;
+	margin-top:45vh;
+	padding:30px;
+	background:#000;
+	color:#FFF;
+	text-align:center;
+}
+.AllHide
+{
+	width:100%;
+	height:2000px;
+	position:fixed;
+    z-index:998;
+	top:0px;
+	background:url(pic/Hidebar.png);
+}
+#tblCartablTr:hover
+{
+    background:#CF9;
+}
+#TopItems
+{
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    float:right;
+    margin-right:30px;
+}
+#TopItemI
+{
+    width:120px;
+    padding-bottom:5px;
+    float:right;
+    background:url(pic/Hidebar.png);
+    margin-right:-20px;
+    display:none;
+}
+#TopItems:hover #TopItemI
+{
+    display:block;
+}
+.topBtn
+{
+    width:95%;
+    margin-top:5px;
+    float:right;
+    margin-right:2.5%;
+    border:none;
+    color:#FFF;
+    text-decoration:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align:center;
+    transition:all 300ms ease-in-out 0s;
+    -o-transition:all 300ms ease-in-out 0s;
+    -moz-transition:all 300ms ease-in-out 0s;
+    -ms-transition:all 300ms ease-in-out 0s;
+    -webkit-transition:all 300ms ease-in-out 0s;
+}
+.topBtn:hover
+{
+    background:#333131;
+}
+.TopSearch
+{
+	float:right;
+	margin-top:15px;
+	margin-right:30px;
+	width:43px;
+	height:38px;
+	background:url(pic/Timer.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	cursor:pointer;
+}
+.HowIs
+{
+	width:20px;
+	height:20px;
+	text-align:center;
+	background:#F30;
+	color:#FFF;
+	float:left;
+	margin-top:20px;
+	border-radius:10px;
+	animation:mohsen 2s;
+	-moz-animation:mohsen 2s;
+	-ms-animation:mohsen 2s;
+	-o-animation:mohsen 2s;
+	-webkit-animation:mohsen 3s;
+	animation-iteration-count:2000;
+	-moz-animation-iteration-count:2000;
+	-ms-animation-iteration-count:2000;
+	-o-animation-iteration-count:2000;
+	-webkit-animation-iteration-count:2000;
+}
+@keyframes mohsen
+{
+	10%{ transform:translateY(-5px) }
+	15%{ transform:translateY(5px) }
+	20%{ transform:translateY(-5px) }
+	25%{ transform:translateY(5px) }
+	30%{ transform:translateY(-5px) }
+	35%{ transform:translateY(5px) }
+	40%{ transform:translateY(0px) }
+}
+@-moz-keyframes mohsen
+{
+	10%{ -moz-transform:translateY(-5px) }
+	15%{ -moz-transform:translateY(5px) }
+	20%{ -moz-transform:translateY(-5px) }
+	25%{ -moz-transform:translateY(5px) }
+	30%{ -moz-transform:translateY(-5px) }
+	35%{ -moz-transform:translateY(5px) }
+	40%{ -moz-transform:translateY(0px) }
+}
+@-ms-keyframes mohsen
+{
+	10%{ -ms-transform:translateY(-5px) }
+	15%{ -ms-transform:translateY(5px) }
+	20%{ -ms-transform:translateY(-5px) }
+	25%{ -ms-transform:translateY(5px) }
+	30%{ -ms-transform:translateY(-5px) }
+	35%{ -ms-transform:translateY(5px) }
+	40%{ -ms-transform:translateY(0px) }
+}
+@-o-keyframes mohsen
+{
+	10%{ -o-transform:translateY(-5px) }
+	15%{ -o-transform:translateY(5px) }
+	20%{ -o-transform:translateY(-5px) }
+	25%{ -o-transform:translateY(5px) }
+	30%{ -o-transform:translateY(-5px) }
+	35%{ -o-transform:translateY(5px) }
+	40%{ -o-transform:translateY(0px) }
+}
+@-webkit-keyframes mohsen
+{
+	10%{ -webkit-transform:translateY(-5px) }
+	15%{ -webkit-transform:translateY(5px) }
+	20%{ -webkit-transform:translateY(-5px) }
+	25%{ -webkit-transform:translateY(5px) }
+	30%{ -webkit-transform:translateY(-5px) }
+	35%{ -webkit-transform:translateY(5px) }
+	40%{ -webkit-transform:translateY(0px) }
+}
+.ButtonTopSearch
+{
+	width:250px;
+	background:#C00;
+	float:right;
+	margin-top:30px;
+	opacity:0;
+	visibility:hidden;
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-ms-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+}
+.TopSearch:hover .ButtonTopSearch
+{
+	visibility:visible;
+	opacity:1;
+	margin-top:10px;
+}
+.ButtonTopSearch
+{
+	background:#dadada;
+	cursor:default;
+}
+.ButtonTopSearchTitle
+{
+	width:100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	background:#000;
+	color:#FFF;
+	text-align:center;
+}
+.ButtonTopSearchItem
+{
+	float:right;
+	width:100%;
+	padding-top:7px;
+	padding-bottom:7px;
+	border-bottom:solid 2px #CCC;
+	cursor:pointer;
+	color:#000;
+}
+.ButtonTopSearchItem:hover
+{
+	background:#666;
+	color:#FFF;
+}
+.ButtonTopSearchItemTitle
+{
+	margin-right:4px;
+	font-weight:bold;
+}
+.ButtonTopSearchItemWho
+{
+	margin-right:10px;
+}
+.ButtonTopSearchItemDate
+{
+	float:left;
+	color:#999;
+	margin-left:10px;
+	font-size:12px;
+}
+.ButtonTopSearchButton
+{
+	float:right;
+	width:100%;
+	padding-top:7px;
+	padding-bottom:7px;
+	background:#999;
+	text-align:center;
+}
+#ShowAll
+{
+	padding:7px;
+	width:150px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	color:#FFF;
+	background:linear-gradient(#093,#096);
+}
+#ShowAll2
+{
+	padding:7px;
+	width:100%;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	color:#FFF;
+	background:linear-gradient(#F33,#ae0808);
+}
+#ConfirmDialogg
+{
+	width:80%;
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	position:relative;
+    height:150px;
+}
+.AllHide2
+{
+	width:100%;
+	position:absolute;
+	top:0px;
+	background:#dadada;
+	min-height:100vh;
+    z-index:999;
+}
+.OKPM
+{
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align:center;
+    background:#CF9;
+    color:#096;
+    box-shadow:0px 0px 10px #CF9;
+    position:fixed;
+    width:200px;
+    margin-right:35%;
+    margin-top:-150px;
+    border-radius:15px;
+    animation:mohsen2 5s;
+    -o-animation:mohsen2 5s;
+    -moz-animation:mohsen2 5s;
+    -ms-animation:mohsen2 5s;
+    -webkit-animation:mohsen2 5s;
+}
+@keyframes mohsen2
+{
+    30%{margin-top:50px;}
+    79%{margin-top:50px;}
+    100%{margin-top:-150px;}
+}
+@-moz-keyframes mohsen2
+{
+    30%{margin-top:50px;}
+    79%{margin-top:50px;}
+    100%{margin-top:-150px;}
+}
+@-o-keyframes mohsen2
+{
+    30%{margin-top:50px;}
+    79%{margin-top:50px;}
+    100%{margin-top:-150px;}
+}
+@-webkit-keyframes mohsen2
+{
+    30%{margin-top:50px;}
+    79%{margin-top:50px;}
+    100%{margin-top:-150px;}
+}
+@-ms-keyframes mohsen2
+{
+    30%{margin-top:50px;}
+    79%{margin-top:50px;}
+    100%{margin-top:-150px;}
+}

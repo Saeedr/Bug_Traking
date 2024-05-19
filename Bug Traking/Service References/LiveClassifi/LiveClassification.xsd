@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Behdasht.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Behdasht.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfReqOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqOrganization" nillable="true" type="tns:ReqOrganization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReqOrganization" nillable="true" type="tns:ArrayOfReqOrganization" />
+  <xs:complexType name="ReqOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActivationStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AreaNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingOwnershipTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryDivisionsCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Draft" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="InternetBandwidth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IntranetBandwidth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MunicipalityRegionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationID8Digit" type="xs:int" />
+      <xs:element minOccurs="0" name="OrganizationNationalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerOrganizationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordCreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StablishmentDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupervisorUniversityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TownshipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqOrganization" nillable="true" type="tns:ReqOrganization" />
+</xs:schema>

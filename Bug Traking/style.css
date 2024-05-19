@@ -1,0 +1,164 @@
+@font-face
+{
+	font-family:'BYekan';
+	src: url('Font/BYekan.eot?#') format('eot'),
+		 url('Font/BYekan.voff') format('voff'),
+		 url('Font/BYekan.ttf') format('truetype');
+}
+*
+{
+	margin:0px;
+	padding:0px;
+	direction:rtl;
+	font-family:'BYekan';
+    font-size:12px;
+}
+#BG
+{
+	background:url(Pic/BG.png);
+	height:148px;
+	width:auto;
+	margin-top:35vh;
+}
+#Main
+{
+	width:508px;
+	height:347px;
+	margin:auto;
+	margin-top:-245px;
+	background:url(Pic/Main.png);
+}
+#LoginItem
+{
+	width:248px;
+	height:73px;
+	float:right;
+	margin-top:110px;
+	margin-right:65px;
+}
+.txt
+{
+	width:140px;
+	height:25px;
+	border:solid 1px #5b9dab;
+	outline:none;
+	background:linear-gradient(#f8f9f3,#f0ede8);
+	border-radius:10px;
+	margin-right:3px;
+	margin-top:3px;
+	box-shadow:0px 0px 1px 2px #FFF inset;
+	transition:all 300ms ease-in-out 0s;
+	-moz-transition:all 300ms ease-in-out 0s;
+	-ms-transition:all 300ms ease-in-out 0s;
+	-o-transition:all 300ms ease-in-out 0s;
+	-webkit-transition:all 300ms ease-in-out 0s;
+	padding-right:5px;
+	padding-left:5px;
+}
+.txt:focus
+{
+	box-shadow:0px 0px 10px #FFF;
+}
+#OnlinMod
+{
+	font-size:14px;
+	width:200px;
+	margin-right:100px;
+	height:27px;
+	margin-top:10px;
+	float:right;
+}
+#OnlinMod img
+{
+	margin-top:-4px;
+}
+.btn
+{
+	width:134px;
+	height:38px;
+	background:url(Pic/btnVorod.png);
+	border:none;
+	float:right;
+	cursor:pointer;
+	outline:none;
+	border-radius:15px;
+	margin-right:15px;
+	margin-top:5px;
+    position:absolute;
+	transition:all 300ms ease-in-out 0s;
+	-moz-transition:all 300ms ease-in-out 0s;
+	-ms-transition:all 300ms ease-in-out 0s;
+	-o-transition:all 300ms ease-in-out 0s;
+	-webkit-transition:all 300ms ease-in-out 0s;
+}
+.btn:hover
+{
+	box-shadow:0px 0px 10px #F90;
+}
+.OKPM
+{
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align:center;
+    background:#CF9;
+    color:#096;
+    box-shadow:0px 0px 10px #CF9;
+    position:absolute;
+    width:200px;
+    margin-right:35%;
+    top:-50px;
+    border-radius:15px;
+    animation:mohsen2 5s;
+    -o-animation:mohsen2 5s;
+    -moz-animation:mohsen2 5s;
+    -ms-animation:mohsen2 5s;
+    -webkit-animation:mohsen2 5s;
+}
+@keyframes mohsen2
+{
+    30%{margin-top:80px;}
+    79%{margin-top:80px;}
+    100%{margin-top:-150px;}
+}
+@-moz-keyframes mohsen2
+{
+    30%{margin-top:80px;}
+    79%{margin-top:80px;}
+    100%{margin-top:-150px;}
+}
+@-o-keyframes mohsen2
+{
+    30%{margin-top:80px;}
+    79%{margin-top:80px;}
+    100%{margin-top:-150px;}
+}
+@-webkit-keyframes mohsen2
+{
+    30%{margin-top:80px;}
+    79%{margin-top:80px;}
+    100%{margin-top:-150px;}
+}
+@-ms-keyframes mohsen2
+{
+    30%{margin-top:80px;}
+    79%{margin-top:80px;}
+    100%{margin-top:-150px;}
+}
+.ConfirmDialog
+{
+	margin:auto;
+	margin-top:45vh;
+	padding:30px;
+	background:#000;
+	color:#FFF;
+	text-align:center;
+}
+.AllHide
+{
+	width:100%;
+	height:2000px;
+	position:fixed;
+    z-index:998;
+	top:0px;
+	background:url(pic/Hidebar.png);
+}

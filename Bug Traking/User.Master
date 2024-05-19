@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="Bug_Traking.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>پرتال کاربران</title>
+    <link rel="stylesheet" type="text/css" href="PanelStyle.css"/>
+    <link type="text/css" href="styles/jquery-ui-1.8.14.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc.js"></script>
+    <script type="text/javascript" src="scripts/calendar.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-ar.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-fa.js"></script>
+<link rel="stylesheet" href="fm.tagator.jquery.css"/>
+	<style>
+		#wrapper {
+			padding: 15px;
+		}
+		#inputTagator {
+			width: 270px;
+		}
+	</style>
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="fm.tagator.jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+	var Heights=new Array();
+	$(".RightPanelItem").each(function(index, element) {
+		Heights.push($(this).css("height"));
+		if(index!=0)
+		$(this).css("height","40px");
+	});
+	$("#RightPanel").css("height", ($(document).height() - 71) + "px");
+	$(".RightPanelItem span").click(function(e) {
+		var ThisID=$(this).attr("id")
+		$(".RightPanelItem").each(function(index, element) {
+			var s= $(this).html();
+			if(s.indexOf(ThisID)!=-1)
+			{
+				$(this).animate({"height":Heights[index]},100);
+			}
+			else
+			{
+				$(this).animate({"height":"40px"},100);
+			}
+		});
+    });
+});
+window.onload(function () {
+    $("#RightPanel").css("height", ($(document).height() - 71) + "px");
+});
+$(window).on('resize', function () {
+    $("#RightPanel").css("height", ($(document).height() - 71) + "px");
+});
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="HeaderPanle">
+        <asp:Literal ID="litTopProp" runat="server"></asp:Literal>
+        <div class="TopSearch"><input type="button" class="btnSearch" value="برو به شماره" /><input type="text" class="txtSearch" /></div>
+        <div class="TopSearch"><input type="button" class="btnSearch" value="جستجوی متن" /><input type="text" class="txtSearch" /></div>
+        <span style="display:block;float:left;margin-left:10px;color:#FFF;margin-top:25px;">
+            <asp:Literal ID="liDate" runat="server"></asp:Literal></span>
+    </div>
+	<div id="RightPanel">
+    
+    	<div class="RightPanelItem">
+            <span id="spnPersonel">مدیریت گزارشات</span>
+            <a href="ClientAddTicket.aspx">◄ افزودن گزارش</a>
+            <a href="ClientTicketsKartable.aspx">◄ کارتابل گزارش ها</a>
+        </div>
+
+        <div class="RightPanelItem">
+            <span id="spnSetting">دیگر</span>
+            <a href="ClientProfile.aspx">◄ ویرایش پروفایل</a>
+            <a href="ClientProfile.aspx">◄ تنظیمات</a>
+            <a href="Exit.aspx">◄ خروج</a>
+        </div>
+    
+    </div>
+    
+    <div class="Content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

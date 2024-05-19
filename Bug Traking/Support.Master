@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Support.master.cs" Inherits="Bug_Traking.Support" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>پرتال پشتیبان</title>
+        <link rel="stylesheet" type="text/css" href="PanelStyle.css"/>
+    <link type="text/css" href="styles/jquery-ui-1.8.14.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc.js"></script>
+    <script type="text/javascript" src="scripts/calendar.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-ar.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ui.datepicker-cc-fa.js"></script>
+<link rel="stylesheet" href="fm.tagator.jquery.css"/>
+	<style>
+		#wrapper {
+			padding: 15px;
+		}
+		#inputTagator {
+			width: 270px;
+		}
+	</style>
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="fm.tagator.jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+	var Heights=new Array();
+	$(".RightPanelItem").each(function(index, element) {
+		Heights.push($(this).css("height"));
+		if(index!=0)
+		$(this).css("height","40px");
+	});
+	$("#RightPanel").css("height", ($(document).height() - 71) + "px");
+	$(".RightPanelItem span").click(function(e) {
+		var ThisID=$(this).attr("id")
+		$(".RightPanelItem").each(function(index, element) {
+			var s= $(this).html();
+			if(s.indexOf(ThisID)!=-1)
+			{
+				$(this).animate({"height":Heights[index]},100);
+			}
+			else
+			{
+				$(this).animate({"height":"40px"},100);
+			}
+		});
+	});
+	$(".AllHide2").hide(0);
+	$("#ShowAll").click(function () {
+	    $(".AllHide2").fadeIn(500);
+	});
+	$("#ShowAll2").click(function () {
+	    $(".AllHide2").fadeOut(500);
+	});
+});
+window.onload(function () {
+    $("#RightPanel").css("height", ($(document).height() - 71) + "px");
+});
+$(window).on('resize', function () {
+    $("#RightPanel").css("height", ($(document).height() - 71) + "px");
+});
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="HeaderPanle">
+            <div id="TopItems"><asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                <div id="TopItemI">
+                    <a class="topBtn" href="SupportProfile.aspx">ویرایش پروفایل</a>
+                    <a class="topBtn" href="Exit.aspx">خروج</a>
+                </div>
+            </div>
+        <asp:Literal ID="litTopProp" runat="server"></asp:Literal>
+
+            <div class="TopSearch">
+            <asp:Literal ID="litTikCount" runat="server"></asp:Literal>
+            <div class="ButtonTopSearch">
+            	<div class="ButtonTopSearchTitle">خطاهای تشدید شده</div>
+
+                <asp:Literal ID="litTopHalNashode" runat="server"></asp:Literal>
+                
+                <div class="ButtonTopSearchButton">
+                	<input type="button" id="ShowAll" value="نمایش همه" />
+                </div>
+                
+            </div>
+        </div>
+
+        <span style="display:block;float:left;margin-left:10px;color:#FFF;margin-top:25px;">
+            <asp:Literal ID="liDate" runat="server"></asp:Literal></span>
+    </div>
+	<div id="RightPanel">
+    
+    	<div class="RightPanelItem">
+            <span id="spn1">تیکت ها</span>
+            <a href="SupportBugAdd.aspx">◄ ثبت باگ جدید</a>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn2">درخواست</span>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn4">جستجو در تیکت</span>
+            <a href="SupportSearch.aspx">◄ جستجو در کارتابل ورودی</a>
+            <a href="SupportSearch2.aspx">◄ جستجو در کارتابل خروجی</a>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn5">پوشه بندی</span>
+            <a href="SupportAddFolder.aspx">◄ افزودن پوشه</a>
+            <asp:Literal ID="liFolder" runat="server"></asp:Literal>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn8">پروفایل ها</span>
+            <a href="SupportProfileManage.aspx">◄ افزودن پروفایل</a>
+            <a href="SupportProfileDel.aspx">◄ مدیریت پروفایل</a>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn3">تنظیمات</span>
+            <a href="SupportPosition.aspx">◄ مدیریت سمت ها</a>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn6">داشبورد</span>
+            <a href="SupportDashboard.aspx">◄ نمایش داشبورد</a>
+        </div>
+        <div class="RightPanelItem">
+            <span id="spn7">کارتابل ها</span>
+        </div>
+    
+    </div>
+    
+    <div class="Content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                <div class="AllHide2">
+    	    <div id="ConfirmDialogg">
+                <table id="tblCartabl" style="width:100%;margin-top:5px;margin-bottom:5px;">
+        	<tr style="font-weight:bold;background:rgb(100, 99, 99);color:#FFF;">
+                <td>انتخاب</td>
+                <td>کد</td>
+            	<td><br />عنوان گزارش<br /><br /></td>
+                <td>تاریخ گزارش</td>
+                <td>تاریخ مشاده</td>
+                <td>نام پروژه</td>
+                <td>توضیحات</td>
+                <td>تاریخچه</td>
+                <td>ضمیمه</td>
+                <td>عملیات</td>
+            </tr>
+                <asp:Repeater ID="Repeater3" runat="server">
+                        <ItemTemplate>
+                            <tr class="ttr" style='background:rgba(254, 255, 255, 0.37); <%# Eval("Part") %>'>
+                                <td>
+                                    <asp:CheckBox class="chk" style="background:none;" mohsenID='<%# Eval("id") %>' runat="server" />
+                                </td>
+                                <td>
+                                    <%# Eval("id") %>
+                                </td>
+                                <td>
+                                    <%# Eval("Title") %>
+                                </td>
+                                <td>
+                                    <%# Eval("SendDataReport") %>
+                                </td>
+                                <td>
+                                    <%# Eval("SeenDataReport") %>
+                                </td>
+                                <td>
+                                    <%# Eval("ProjectName") %>
+                                </td>
+                                <td>
+                                    <%# Eval("Description") %>
+                                </td>
+                                <td>
+                                    <%# Eval("HasLastError") %>
+                                </td>
+                                <td>
+                                    <%# Eval("FileName") %>
+                                </td>
+                                <td>
+                                    <a href='SupportTiketShow.aspx?id=<%# Eval("id") %>'><input type='button' value='نمایش' class='ShowBtn' /></a>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                </asp:Repeater>
+        </table>
+                 <input type="button" id="ShowAll2" value="بازگشت" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
